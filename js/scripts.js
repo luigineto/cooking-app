@@ -1,50 +1,35 @@
-var add = function(number1, number2) {
-	return number1 + number2;
+var lbToG = function(pound) {
+	return pound / 0.0022046;
 };
 
-var subtract = function(number1, number2) {
-	return number1 - number2;
+var gToLb = function(gram) {
+	return gram * 0.0022046;
 };
 
-var multiply = function(number1, number2) {
-	return number1 * number2;
+var usGalToL = function(usGallon) {
+	return usGallon / 0.26417;
 };
 
-var divide = function(number1, number2) {
-	return number1 / number2;
+var lToUsGal = function(liter) {
+	return liter * 0.26417;
 };
 
-var bmi = function(weightInKg, heightInM) {
-	return weightInKg / (heightInM^2);
-};
-
-var celsiusToFahrenheit = function(celsius) {
-	return (celsius * 9/5) + 32;
-};
-
-var number1 = parseInt(prompt("Enter a number:"));
-var number2 = parseInt(prompt("Enter another number:"));
-
-var result = add(number1, number2);
+var pound = parseInt(prompt("Enter a pound unit value:"));
+result = lbToG(pound);
 alert(result);
 
-result = subtract(number1, number2);
+var gram = parseInt(prompt("Enter a gram unit value:"));
+result = gToLb(gram);
 alert(result);
 
-result = multiply(number1, number2);
+var usGallon = parseInt(prompt("Enter an US gallon unit value:"));
+result = usGalToL(usGallon);
 alert(result);
 
-result = divide(number1, number2);
+var liter = parseInt(prompt("Enter a liter unit value:"));
+result = lToUsGal(liter);
 alert(result);
 
-var weightInKg = parseInt(prompt("Enter a weight in kg:"));
-var heightInM = parseInt(prompt("Enter a height in m:"));
-result = bmi(weightInKg, heightInM);
-alert(result);
-
-var celsius = parseInt(prompt("Enter a temperature in Celsius:"));
-result = celsiusToFahrenheit(celsius);
-alert(result);
 
 
 
